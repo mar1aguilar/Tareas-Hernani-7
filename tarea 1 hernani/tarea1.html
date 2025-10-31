@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUERPOOO</title>
+     <link rel="stylesheet" href="tarea1.css"
+</head> 
+<body>
+    <h1> CUERPO DESMEMBRADO </h1>
+    <p> El archivo json dice que la parte del cepo desmembrada fue: </P>
+    <p><span id="accion"></span></p> 
+
+    <!--<script src="hola.js"></script>-->
+
+    <script> 
+        fetch('tarea1.json')
+        .then(response => response.json())
+        .then(json => {
+            document.getElementById("accion").innerHTML=json.acciones[2]+" "+json.partes [1];
+            console.log(json.acciones[2]);
+        })
+    </script>
+</body>
+</html>

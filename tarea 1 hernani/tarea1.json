@@ -1,0 +1,4 @@
+{"partes":["mano", "dedo","cuello", "pie"],
+ "acciones":["doblar", "girar","cerrar", "levantar"],
+"lado":["izquierdo", "derercho"]
+}
