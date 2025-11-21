@@ -1,0 +1,17 @@
+/* styles.css - muy simple para centrar el canvas */
+body{
+font-family: Arial, sans-serif;
+text-align: center;
+padding: 20px;
+background: #f3f6fb;
+}
+#area{
+display: flex;
+justify-content: center;
+margin-top: 12px;
+}
+/* El canvas creado por p5 estará dentro de #area */
+#area canvas{
+border: 2px solid #ccc;
+border-radius: 6px;
+}
