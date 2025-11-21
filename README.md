@@ -2,7 +2,7 @@
 
 Nombre: Maria de Jesus
 UEA: Producción y Comunicación en la Cultura Comunicativa  
-Licenciatura:* Arte y Comunicación Digitales  
+Licenciatura:Arte y Comunicación Digitales  
 
 ## Objetivo del repositorio
 
