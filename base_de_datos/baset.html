@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Datos Supabase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="baset.css">
+
+  <script type="module">
+    import { createClient } from "https://esm.sh/@supabase/supabase-js";
+
+    const supabase = createClient(
+      "https://hxfpcfchqsvapoftnhzw.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4ZnBjZmNocXN2YXBvZnRuaHp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ2NzI0MjIsImV4cCI6MjA4MDI0ODQyMn0.Lu9ih8S2p_qv7Y7XM5qHm7loF09CM8OLF8JL4z9RPUc"
+    );
+
+    async function leerDatos() {
+      const respuesta = await supabase
+        .from("base de datos")  
+        .select("*");           
+
+      console.log("Datos recibidos:", respuesta.data);  
+     
+      const contenedor = document.getElementById("lista");
+
+      let texto = "";
+      respuesta.data.forEach(fila => {
+        texto += `ID: ${fila.id} - Número: ${fila.numero} - Texto: ${fila.texto}<br>`;
+      });
+
+      contenedor.innerHTML = texto;
+    }
+
+    leerDatos();
+  </script>
+</head>
+
+<body>
+  <h1>Datos en Supabase</h1>
+
+ 
+  <div id="lista">Datos!!</div>
+
+</body>
+</html>
+
